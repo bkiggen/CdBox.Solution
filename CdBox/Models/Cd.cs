@@ -6,7 +6,8 @@ namespace CdBox.Models
   {
     private string _artist;
     private string _album;
-    private static List<Cd> _instances = new List<Item> { };
+    private int _id;
+    private static List<Cd> _instances = new List<Cd> { };
 
     public Cd(string artist, string album)
     {
@@ -24,7 +25,7 @@ namespace CdBox.Models
     {
       return _album;
     }
-    public void SetArtist(string newDescription)
+    public void SetArtist(string artist)
     {
       _artist = artist;
     }
@@ -35,6 +36,10 @@ namespace CdBox.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+    public static Cd Find(int id)
+    {
+      return _instances[id-1];
     }
   }
 }
