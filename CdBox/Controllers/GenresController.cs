@@ -25,14 +25,14 @@ namespace CdBox.Controllers
       List<Genre> allGenres = Genre.GetAll();
       return View("Index", allGenres);
     }
-    [HttpPost("/genres/{id}")]
+    [HttpGet("/genres/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Genre selectedGenre = Genre.Find(id);
-      List<Cd> genreItems = selectedGenre.GetCds();
+      List<Cd> genreCds = selectedGenre.GetCds();
       model.Add("genre", selectedGenre);
-      model.Add("cds", genreItems);
+      model.Add("cds", genreCds);
       return View(model);
     }
     [HttpPost("/genres/{genreId}/cds")]

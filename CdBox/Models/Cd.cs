@@ -39,7 +39,11 @@ namespace CdBox.Models
     }
     public static Cd Find(int id)
     {
-      return _instances[id-1];
+      return _instances[id];
+    }
+    public int GetId()
+    {
+      return _id;
     }
   }
 }

@@ -3,7 +3,7 @@
 <ol>
     @foreach (var cd in @Model["cds"])
     {
-        <li><a href='/genres/@Model["genre"].GetId()/cds/@cd.GetId()'>@cd.GetDescription()</a></li>
+        <li><a href='/genres/@Model["genre"].GetId()/cds/@cd.GetId()'>@cd.GetArtist()</a></li>
     }
 </ol>
 
