@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Your sweet jams: </title>
+  </head>
+  <body>
+    <h1>Add new item to @Model.GetGenre()</h1>
+
+    <form action="/genres/@Model.GetId()/cds" method="post">
+      <input id="genreId" name="genreId" type="hidden" value="@Model.GetId()">
+      <label for="cdArtist">Artist</label>
+      <input id="cdArtist" name="cdArtist" type="text">
+      <label for="cdAlbum">Album</label>
+      <input id="cdAlbum" name="cdAlbum" type="text">
+      <button type="submit">Add CD</button>
+    </form>
+
+  </body>
+</html>

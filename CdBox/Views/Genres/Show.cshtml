@@ -1,0 +1,12 @@
+<h3>Here are all the CDs in this genre: </h3>
+
+<ol>
+    @foreach (var cd in @Model["cds"])
+    {
+        <li><a href='/genres/@Model["genre"].GetId()/cds/@cd.GetId()'>@cd.GetDescription()</a></li>
+    }
+</ol>
+
+<p><a href='/genres/@Model["genre"].GetId()/cds/new'>Add a new cd</a></p>
+<p><a href='/genres'>Return to category list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

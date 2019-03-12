@@ -1,0 +1,8 @@
+<h1>Album Details: </h1>
+
+<h2>@Model["cd"].GetAlbum()</h2>
+<h2>@Model["cd"].GetArtist()</h2>
+<h3>Category: @Model["genre"].GetGenre()</h3>
+
+<a href='/genres/@Model["genre"].GetId()/items/new'>Add another item</a>
+<a href='/genres'>View all categories</a>
